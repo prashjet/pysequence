@@ -23,12 +23,12 @@ def fibonacci_numbers(n):
 def prime_numbers(n):
     """Return a list of all prime numbers up to n
     """
-    integers = np.linspace(2, n, n-1, dtype=int)
-    seive = np.array([True for i in range(n-1)])
-    for i in range(2, n-1):
+    integers = np.linspace(1, n, n, dtype=int)
+    seive = np.array([True for i in range(n)])
+    for i in range(2, n):
         seive[i+i-1::i] = False
     result = integers[seive]
-    result = list(result)
+    result = list(result[1:])
     return result
 
 def get_sequence(name):
