@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysequence"
+dynamic = ["version"]
+authors = [
+    { name="Prashin Jethwa", email="prashin.jethwa@univie.ac.at" },
+]
+description = "A package for mathematical sequences."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy >=1.23",
+]
+
+[project.urls]
+Homepage = "https://github.com/prashjet/pysequence"
+
+[tool.setuptools.dynamic]
+version = {attr = "pysequence.__version__"}
