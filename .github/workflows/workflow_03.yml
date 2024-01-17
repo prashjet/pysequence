@@ -1,10 +1,10 @@
 name: Python package
 
-on:
-  delete
 # on:
-#   push:
-#     branches: [ "main" ]
+#   delete
+on:
+  push:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pytest coverage
         pip install .
-    - name: Test with pytest
+    - name: Test with pytest, via coverage
       run: coverage run -m pytest
     - name: Upload coverage report to Codecov
       uses: codecov/codecov-action@v3
