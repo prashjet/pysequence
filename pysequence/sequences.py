@@ -5,6 +5,7 @@ def even_numbers(n):
     """
     result = []
     a = 2
+    b = 1
     while a < n:
         result.append(a)
         a = a+2
